@@ -14,8 +14,6 @@ for(let n = 0; n < numeros.length; n++) {
 
 let media = soma / numeros.length;
 
-console.log(media)
-
 let numerosPositivos = 0;
 let numerosNegativos = 0;
 numeros.forEach(function (cada){
@@ -28,15 +26,17 @@ numeros.forEach(function (cada){
 }
 );
 
-//testar 
+let porcentagemPositivos = (numerosPositivos/numeros.length) * 100;
+let porcentagemNegativos = (numerosNegativos/numeros.length) * 100;
 
-console.log(numerosPositivos)
-console.log(numerosNegativos)
+console.log(`A media dos aritmética: ${media}`);
+console.log(`Numeros positivos: ${numerosPositivos}`);
+console.log(`Numeros negativos:${numerosNegativos}`)
+console.log(`Porcentagem de numeros Positivos: ${porcentagemPositivos}%`)
+console.log(`Porcentagem de numeros Negativos: ${porcentagemNegativos}%`)
 
-//falta as porcentagem
-
-let qte_positivos = (numerosPositivos - numerosNegativos) * 100;
-let qte_negativos = (numerosNegativos - numerosPositivos) * 100;
-
-console.log(qte_positivos)
-console.log(qte_negativos)
+document.write(`A media dos aritmética: ${media} <br>`)
+document.write(`Numeros positivos: ${numerosPositivos} <br>`)
+document.write(`Numeros negativos:${numerosNegativos} <br>`)
+document.write(`Porcentagem de numeros Positivos: ${porcentagemPositivos}% <br>`)
+document.write(`Porcentagem de numeros Negativos: ${porcentagemNegativos}%`)
