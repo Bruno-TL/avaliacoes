@@ -2,16 +2,25 @@
 //a. A menor altura do grupo; 
 //b. A maior altura do grupo;
 
-let altura = [1.5, 1.6, 1.8, 1.2, 1.7, 1.3, 1.4, 1.5, 1.9, 2.0 , 2.2, 2.8, 2.9, 2.7, 2.4]
+let altura = [1.5, 1.6, 1.8, 1.2, 1.7, 1.3, 1.4, 1.5, 1.9, 2.0 , 2.2, 2.8, 2.9, 2.7, 2.4];
 
 
-altura.sort(function(a, b){return a - b}) //Sort irá comparar todos os numeros 2 por vez e depois colocar em ordem crescente.
+let alturaMaxima = 0;
+let alturaMinima = altura.length;//Tenhe que ser um numero maior que zero, pra não ser um numero fixo coloquei "lenght" ja que especifica que a lista vai ter muitas alturas.
 
-let maiorAltura = altura[0]
-let menorAltura = altura[altura.length - 1]
 
-console.log(`A maior altura do grupo: ${maiorAltura}`);
-console.log(`A menor altura do grupo: ${menorAltura}`);
+for(let i = 0; i < altura.length; i++){
+    if(altura[i] > alturaMaxima){
+        alturaMaxima = altura[i];
+    }
+    
+    if(altura[i] < alturaMinima){
+        alturaMinima = altura[i];
+    }
+}
 
-//let maior = Math.max(...altura); modo mais rápido de pegar o maior número
-//let menor = math.min(...altura); e o menor número
+console.log(`Altura máxima: ${alturaMaxima}`);
+document.write(`Altura máxima: ${alturaMaxima} <br>`);
+
+console.log(`Altura mínima: ${alturaMinima}`);
+document.write(`Altura mínima: ${alturaMinima}`)
